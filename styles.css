@@ -72,8 +72,9 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    width: 400px;
-    height: 530px;
+    width: 90%; /* Ekranın genişliğine bağlı olarak dinamik genişlik */
+    height: auto; /* İçeriğe göre yükseklik ayarı */
+    padding: 20px; /* İç padding */
   }
   .profile_image img {
     width: 60px;
@@ -86,11 +87,14 @@ body {
     font-size: 0.9rem;
   }
   .social_links {
-    width: 300px;
-    height: 200px;
+    width: 100%; /* Konteyner genişliğine göre ayarlama */
+    height: auto; /* Buton sayısına göre yükseklik */
+    gap: 10px; /* Butonlar arası boşluk */
   }
   .social_links > a {
-    margin: 0px 20px;
-    padding: 10px 0px;
+    margin: 0 10px; /* Kenar boşluklarını azalt */
+    padding: 10px; /* İç boşluk */
+    width: calc(100% - 20px); /* Kenar boşluklarını hesaba kat */
+    box-sizing: border-box; /* Padding ve border genişliği toplam genişliğe dahil et */
   }
 }
